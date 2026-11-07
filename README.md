@@ -32,9 +32,9 @@ From the `backend` folder:
 mvn spring-boot:run
 ```
 
-Backend URL: `http://localhost:8080`
+Backend URL: `https://taskmanagement37.onrender.com/api/tasks
 
-Test endpoint: `GET http://localhost:8080/api/tasks`
+Test endpoint: `GET https://taskmanagement37.onrender.com/api/tasks
 
 ## 3. Start the frontend
 
@@ -47,7 +47,7 @@ npm install
 npm run dev
 ```
 
-Open the URL printed by Vite, usually `http://localhost:5173`.
+Open the URL printed by Vite, usually `https://taskmanagement37.onrender.com/api/tasks.
 
 ## API endpoints
 

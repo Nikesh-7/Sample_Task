@@ -7,7 +7,9 @@ for = "/*.js"
 [headers.values]
 Content-Type = "application/javascript; charset=utf-8"
 
-[[headers]]
+[[headers]]git add .
+git commit -m "Fix frontend backend connection"
+git push origin main
 for = "/*.mjs"
 [headers.values]
 Content-Type = "application/javascript; charset=utf-8"
