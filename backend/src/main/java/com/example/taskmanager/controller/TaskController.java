@@ -11,7 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://taskmanagement37.netlify.app"
+})
 public class TaskController {
 
     private final TaskRepository taskRepository;
@@ -33,9 +36,13 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public Task updateTask(@PathVariable Long id, @Valid @RequestBody Task updatedTask) {
+    public Task updateTask(
+            @PathVariable Long id,
+            @Valid @RequestBody Task updatedTask) {
+
         Task existingTask = taskRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Task not found"));
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Task not found"));
 
         existingTask.setTitle(updatedTask.getTitle());
         existingTask.setDescription(updatedTask.getDescription());
@@ -47,9 +54,12 @@ public class TaskController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteTask(@PathVariable Long id) {
+
         if (!taskRepository.existsById(id)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Task not found");
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "Task not found");
         }
+
         taskRepository.deleteById(id);
     }
 }
