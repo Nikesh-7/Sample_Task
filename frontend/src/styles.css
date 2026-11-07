@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f9;
+  color: #202536;
+}
+
+button, input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 56px 18px 24px;
+}
+
+.app-card {
+  width: min(100%, 680px);
+  margin: 0 auto;
+  padding: 34px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(30, 45, 80, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #5268d8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 38px);
+}
+
+.subtitle {
+  margin: 10px 0 26px;
+  color: #737b8c;
+}
+
+.task-form {
+  display: grid;
+  gap: 10px;
+}
+
+.task-form input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dce1eb;
+  border-radius: 9px;
+  outline: none;
+}
+
+.task-form input:focus {
+  border-color: #5268d8;
+}
+
+.task-form button {
+  padding: 13px;
+  border: 0;
+  border-radius: 9px;
+  background: #5268d8;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 26px 0 12px;
+  color: #737b8c;
+  font-size: 14px;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #e7eaf0;
+  border-radius: 10px;
+}
+
+.task-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  min-width: 0;
+}
+
+.task-text input {
+  margin-top: 3px;
+  accent-color: #5268d8;
+}
+
+.task-text span {
+  display: grid;
+  gap: 5px;
+  overflow-wrap: anywhere;
+}
+
+.task-text small {
+  color: #737b8c;
+}
+
+.completed strong {
+  color: #9299a7;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: #fff0f0;
+  color: #c04444;
+  cursor: pointer;
+}
+
+.empty {
+  padding: 20px 0;
+  color: #737b8c;
+  text-align: center;
+}
+
+.error {
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #b42318;
+  font-size: 14px;
+}
+
+footer {
+  margin: 20px auto 0;
+  color: #858c9b;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding-top: 24px;
+  }
+
+  .app-card {
+    padding: 22px;
+  }
+}
